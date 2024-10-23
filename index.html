@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- icons CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
+    <!-- Iframe Link Modifier -->
+    <script src="https://www.sumtotaldemo.site/resources/js/iframe-link-modifier-17_2.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+
+    </style>
+
+    <!-- Mobile viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no, minimal-ui">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div id="player-container" style="display: none;">
+            <div id="close-video">
+                <i class="fa fa-times-circle"></i>
+            </div>
+
+            <div class="video-container">
+                <div id="player" style="display: none;"></div>
+            </div>
+
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            
+            <!--<video class="background_video" loop preload autoplay muted>
+                <source src="img/background720.mp4">
+            </video>-->
+
+            <!-- Carousel -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                <div class="crossfade">
+                    <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
+                </div>
+                
+                <div class="text_wrapper">
+                <div class="text">
+                    <h2>WELCOME TO YOUR</h2>
+                    <h1>Prodapt Career Portal</h1>
+                    
+                    <a href="SumTotal_20.2_Getting_Started_Guide.pdf" class="header_button rcore_no" target="_blank"><span class="second_span">START GUIDE &nbsp;&#9656;</span></a>
+                    
+                    
+                    <form action="/Core/search" target="_top" class="search_form rcore_yes">
+                        <input type="hidden" name="context" value="activity">
+                        <input type="text" name="searchTerm" class="search_field" placeholder="What would you like to learn?">
+
+                        <button type="submit" class="submit_button">
+                            <i class="fa  fa-search fa-2x"></i>
+                        </button>
+                    </form>
+                    
+                </div>
+                </div><!-- end text_wrapper -->
+                
+                
+                
+                
+                
+            </div>
+
+        </div>
+        <!-- End Header -->
+
+        <!-- Buttons -->
+        <div class="buttons animate-panel">
+
+            <ul class="list-unstyled list-inline">
+                <li>
+                    <a href="/Core/dash/learning" target="_top">
+                        <div class="inner">
+                            <p>My Learning</p>
+                            <div class="description">
+                                <p>Access your personal learning dashboard.</p>
+                            </div>
+                        </div>
+
+                    </a>
+                </li><!--
+
+                --><li>
+                    <a href="/Core/careerplan" target="_top">
+                        <div class="inner">
+                            <p>My Career Path</p>
+                            <div class="description">
+                                <p>Map out your career path.</p>
+                            </div>
+                        </div>
+
+                    </a>
+                </li><!--
+
+                --><li>
+                    <a href="/Core/ManagePlaylists" target="_top">
+                        <div class="inner">
+                            <p>My Playlist</p>
+                            <div class="description">
+                                <p>View your playlist.</p>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </li><!--
+
+                --><li>
+                    <a href="/Core/pillarRedirect?relyingParty=LM&url=%2Flearning%2Fapp%2Fmanagement%2FLMS_LearnerReports.aspx%3FUserMode%3D0%26Mode%3D1" target="_top">
+                        <div class="inner">
+                            <p>My History</p>
+                            <div class="description">
+                                <p>View your personal transcript.</p>
+                            </div>
+                        </div>
+
+                    </a>
+                </li><!--
+
+                --><li>
+                    <a href="/Core/devplan" target="_top">
+                        <div class="inner">
+                            <p>My Development Plan</p>
+                             <div class="description">
+                                <p>Work on becoming more proficient with the skills that matter.</p>
+                            </div>
+                        </div>
+
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End Buttons -->
+
+    </div>
+    <!-- wrapper -->
+    
+    
+    <!-- script for button behavior -->
+    <!--<script type="application/javascript">
+
+        var button1pretextwidth = document.getElementsByClassName('button1pretext')[0].offsetWidth + 29;
+        var button2pretextwidth = document.getElementsByClassName('button2pretext')[0].offsetWidth + 29;
+        
+        
+        var css = '.list a.smallest.button1:hover {padding-left: '+button1pretextwidth+'px;}.list a.smallest.button2:hover {padding-left: '+button2pretextwidth+'px; }';
+        var style = document.createElement('style');
+
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+
+        document.getElementsByTagName('head')[0].appendChild(style);        
+        
+        
+    </script>-->
+    
+
+
+
+    <!-- Video JavaScript Section -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var panels = $('.animate-panel');
+            var items = panels.find("li");
+
+            var listItemDelay = 100;
+            var j = 1200;
+
+            items.each(function() {
+                var this_js = this
+                window.setTimeout(function() {
+                    $(this_js).addClass("animate");
+                }, j);
+                window.setTimeout(function() {
+                    $(this_js).addClass("done");
+                }, j + 1000);
+                j += listItemDelay;
+            });
+        });
+
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                videoId: '',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        $('.youtube-link').click(function() {
+            $('#player-container').fadeIn(500);
+            $('#player').fadeIn(100);
+            player.loadVideoById(this.id);
+        });
+
+        $('#close-video').click(function() {
+            $('#player-container').fadeOut(500);
+            $('#player').fadeOut(100);
+            player.loadVideoById(this.id);
+
+        });
+
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) { // escape key maps to keycode `27`
+                $('#player-container').fadeOut(500);
+                $('#player').fadeOut(100);
+                player.loadVideoById(this.id);
+
+            }
+        });
+        
+        
+        function getQueryVariable(variable)
+        {
+               var query = window.location.search.substring(1);
+               var vars = query.split("&");
+               for (var i=0;i<vars.length;i++) {
+                       var pair = vars[i].split("=");
+                       if(pair[0] == variable){return pair[1];}
+               }
+               return(false);
+        };
+        
+        if (getQueryVariable("rcore") == "yes") {
+
+            $('.rcore_no').hide();
+        }
+        else {
+            $('.rcore_yes').hide();
+        }
+       
+        
+        
+    </script>
+
+</body>
+
+</html>
